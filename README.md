@@ -39,3 +39,15 @@ Ao longo do desenvolvimento, foram realizadas **adaptações e decisões própri
 - Streamlit
 - API da Groq
 - Git & GitHub
+
+---
+
+## Deploy
+
+A aplicação está disponível online via **Streamlit Community Cloud**:
+
+**Acesse o app:**  
+https://assistentepython.streamlit.app/
+
+O deploy foi realizado a partir deste repositório público do GitHub, utilizando as configurações padrão da plataforma.  
+As credenciais sensíveis (API Key) são gerenciadas de forma segura por meio do recurso **Secrets** do Streamlit Cloud.
