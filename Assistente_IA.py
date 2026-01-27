@@ -33,16 +33,23 @@ with st.sidebar:
     st.markdown("A IA pode cometer erros, sempre verifique as respostas!")
 
 # Obtém a API key automaticamente do ambiente/secrets
+client = None
+
 try:
     groq_api_key = st.secrets["GROQ_API_KEY"]
+    client = Groq(api_key=groq_api_key)
 except KeyError:
-    st.error("API Key da Groq não configurada.")
-    st.stop()
-
-client = Groq(api_key=groq_api_key)
+    st.warning("Assistente indisponível no momento (API não configurada).")
+except Exception:
+    st.error("Erro ao inicializar o assistente.")
 
 st.title("Assistente de Programação Python 🐍")
-st.caption("Faça sua pergunta sobre a Linguagem Python e obtenha código, explicações e referências.")
+st.caption(
+    "Faça sua pergunta sobre a Linguagem Python e obtenha código, explicações e referências."
+)
+
+if not client:
+    st.info("O chat está desativado no momento.")
 
 # Inicializa o histórico de mensagens na sessão, caso ainda não exista
 if "messages" not in st.session_state:
