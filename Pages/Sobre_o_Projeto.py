@@ -1,11 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Sobre",
-    page_icon="💻",
-    layout="centered",
-    )
-
 st.title("Sobre o projeto")
 
 st.markdown(" Este projeto foi desenvolvido como parte integrante do processo de aprendizagem do curso *Fundamentos de Linguagem Python: do Básico a Aplicações de IA*, da [Data Science Academy](https://www.datascienceacademy.com.br), com foco na aplicação prática dos conceitos e na exploração do uso de IA, incorporando adaptações e decisões próprias ao longo do desenvolvimento. ")
