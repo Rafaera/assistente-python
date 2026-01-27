@@ -1,7 +1,6 @@
 import os
 from groq import Groq
 import streamlit as st
-from streamlit_theme import st_theme
 
 # Configura a página do streamlit, com título, ícone, layout etc
 st.set_page_config(
@@ -106,8 +105,3 @@ if prompt := st.chat_input("Qual sua dúvida sobre Python?"):
             # Caso ocorra erro na comunicação com a API, exibe mensagem de erro
             except Exception as e:
                 st.error(f"Ocorreu um erro ao se comunicar com a API da Groq: {e}")
-
-
-# Tema claro/escuro da página
-theme = st_theme
-st.write = (theme)
