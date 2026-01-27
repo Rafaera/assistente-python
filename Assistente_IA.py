@@ -1,4 +1,3 @@
-import os
 from groq import Groq
 import streamlit as st
 
@@ -54,17 +53,9 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Inicializa a variável do cliente Groq como None
-client = None
-
 # Captura a entrada do usuário no chat
 if prompt := st.chat_input("Qual sua dúvida sobre Python?"):
     
-    # Se não houver cliente válido, mostra aviso e para a execução
-    if not client:
-        st.warning("Por favor, insira sua API Key da Groq na barra lateral para começar.")
-        st.stop()
-
     # Armazena a mensagem do usuário no estado da sessão
     st.session_state.messages.append({"role": "user", "content": prompt})
     
