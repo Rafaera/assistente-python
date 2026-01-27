@@ -85,13 +85,13 @@ if prompt := st.chat_input("Qual sua dúvida sobre Python?"):
                 )
                 
                 # Extrai a resposta gerada pela API
-                dsa_ai_resposta = chat_completion.choices[0].message.content
+                ai_resposta = chat_completion.choices[0].message.content
                 
                 # Exibe a resposta no Streamlit
-                st.markdown(dsa_ai_resposta)
+                st.markdown(ai_resposta)
                 
                 # Armazena resposta do assistente no estado da sessão
-                st.session_state.messages.append({"role": "assistant", "content": dsa_ai_resposta})
+                st.session_state.messages.append({"role": "assistant", "content": ai_resposta})
 
             # Caso ocorra erro na comunicação com a API, exibe mensagem de erro
             except Exception as e:

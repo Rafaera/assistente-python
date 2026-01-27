@@ -12,8 +12,8 @@ st.markdown(" Este projeto foi desenvolvido como parte integrante do processo de
 
 st.markdown("**Links:**")
 st.markdown(""" 
-- [GitHub](https://github.com)
-- [LinkedIn](https://www.linkedin.com)
+- [Repositório no GitHub](https://github.com/Rafaera/assistente-python)
+- [LinkedIn](https://www.linkedin.com/in/rafaela-santos-924508322/)
 """)
 
 st.divider()
