@@ -22,7 +22,7 @@ st.divider()
 st.markdown(
     """
     <div style="text-align: center; color: gray; font-size: 0.85rem;">
-       · Autora: Rafaela Santos · 
+       · Desenvolvido por Rafaela Santos · 
     </div>
     """,
     unsafe_allow_html=True
